@@ -1,15 +1,15 @@
 console.log("Welcome to Spotify");
 
 // Initialize the Variables
-let songIndex = 0;
-let audioElement = new Audio('songs/1.mp3');
-let masterPlay = document.getElementById('masterPlay');
-let myProgressBar = document.getElementById('myProgressBar');
-let gif = document.getElementById('gif');
-let masterSongName = document.getElementById('masterSongName');
-let songItems = Array.from(document.getElementsByClassName('songItem'));
+var songIndex = 0;
+var audioElement = new Audio('songs/1.mp3');
+var masterPlay = document.getElementById('masterPlay');
+var myProgressBar = document.getElementById('myProgressBar');
+var gif = document.getElementById('gif');
+var masterSongName = document.getElementById('masterSongName');
+var songItems = Array.from(document.getElementsByClassName('songItem'));
 
-let songs = [
+var songs = [
     {songName: "Srivalli", filePath: "songs/1.mp3", coverPath: "covers/1.jfif"},
     {songName: "Daru Badnaam", filePath: "songs/2.mp3", coverPath: "covers/2.jpg"},
     {songName: "Ghalat Fehmi", filePath: "songs/3.mp3", coverPath: "covers/3.jpg"},
