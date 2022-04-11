@@ -5,70 +5,21 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Play free on mobile - Spotify - Spotify (IN)</title>
-        <link rel="shortcut icon" href="/Spotify/Favicons/redketchup/android-chrome-192x192.png" type="image/x-icon">
-        <link rel="shortcut icon" href="/Spotify/Favicons/redketchup/apple-touch-icon.png" type="image/x-icon">
-        <link rel="shortcut icon" href="/Spotify/Favicons/redketchup/favicon-16x16.png" type="image/x-icon">
-        <link rel="shortcut icon" href="/Spotify/Favicons/redketchup/favicon-32x32.png" type="image/x-icon">
-        <link rel="shortcut icon" href="/Spotify/Favicons/redketchup/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="https://wwwmarketing.scdn.co/img/favicon-96x96.png" type="image/x-icon">
         <link rel="stylesheet" href="/Spotify/Styles/style.css">
+        <script src="https://kit.fontawesome.com/b832c13233.js" crossorigin="anonymous"></script>
         </head>
 <body>
-    <nav>
-        <ul>
-            <li class="brand"><img src="/Spotify/logo.png" alt="Spotify"> Spotify</li>
-            <li>Home</li>
-            <li>About</li>
-        </ul>
-    </nav>
+    <div id="navbar">
+
+    </div>
 
     <div class="container">
         <div class="songList">
             <h1>Top 9 Hits of the Week</h1>
             <div class="songItemContainer">
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">03:44 <i id="0" class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">03:05 <i id="1" class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">04:46 <i id="2" class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">04:03 <i id="3" class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">03:51 <i id="4" class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">02:48 <i id="5" class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">04:04 <i id="6" class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">04:11 <i id="7" class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">03:44 <i id="8" class="far songItemPlay fa-play-circle"></i> </span></span>
+                <div id="songBox">
+
                 </div>
             </div>
         </div>
@@ -86,8 +37,30 @@
         <div class="songInfo">
             <img src="/Spotify/playing.gif" width="42px" alt="" id="gif"> <span id="masterSongName">Srivalli</span>
         </div>
+        
     </div>
-    <script src="/Spotify/Scripts/script.js"></script>
-    <script src="https://kit.fontawesome.com/b832c13233.js" crossorigin="anonymous"></script>
 </body>
 </html>
+<script type="module">
+
+import { mainNavbar } from "./components/navbar.js"
+import indexSongList from "./components/indexSongList.js"
+
+// console.log('navbar:', mainNavbar)
+// console.log(indexSongList)
+
+let navDiv = document.getElementById("navbar")
+navDiv.innerHTML = mainNavbar()
+
+let songBoxdiv = document.getElementById("songBox")
+songBoxdiv.innerHTML = indexSongList()
+
+
+</script>
+
+<script src="/Spotify/Scripts/script.js" type="module"></script>
+<script type="module">
+document.getElementById("homelink").addEventListener("click", function(){
+    window.location.href = "./index.html"
+})
+</script>

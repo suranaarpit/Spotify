@@ -36,7 +36,12 @@ nav ul li{
     font-weight: bolder;
     font-size: 1.3rem;
 }
-
+#homelink{
+    cursor: pointer;
+}
+#aboutLink{
+    cursor: pointer;
+}
 .container{
     min-height: 72vh;
     background-color: black;
