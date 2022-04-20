@@ -35,7 +35,7 @@
             <i class="fas fa-3x fa-step-forward" id="next"></i> 
         </div>
         <div class="songInfo">
-            <img src="/Spotify/playing.gif" width="42px" alt="" id="gif"> <span id="masterSongName">Srivalli</span>
+            <img src="/Spotify/playing.gif" width="42px" alt="" id="gif"> <span id="masterSongName"></span>
         </div>
         
     </div>
@@ -62,5 +62,8 @@ songBoxdiv.innerHTML = indexSongList()
 <script type="module">
 document.getElementById("homelink").addEventListener("click", function(){
     window.location.href = "./index.html"
+})
+document.getElementById("aboutLink").addEventListener("click", function(){
+    window.location.href = "./pages/about.html"
 })
 </script>
